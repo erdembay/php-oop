@@ -5,7 +5,7 @@ abstract class Employee implements IEmployee { // Class
     protected string $firstName; // Property
     protected string $lastName; // Property
     protected int $age; // Property
-    protected float $salary; // Property
+    public const SALARY = 9000; // Property
     protected int $experience; // Property
     public function __construct(int $age) { // Constructor
         $this->age = $age;
@@ -32,13 +32,6 @@ abstract class Employee implements IEmployee { // Class
         return $this;
     }
     abstract function calculateSalary(): float; // Abstract method
-    public function getSalary(): float { // Method
-        return $this->salary;
-    }
-    public function setSalary(float $salary): Employee { // Method
-        $this->salary = $salary;
-        return $this;
-    }
     public function getExperience(): int { // Method
         return $this->experience;
     }

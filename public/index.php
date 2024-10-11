@@ -16,9 +16,9 @@
     $account = new Account(25);
     $ik = new Ik(30);
 
-    $manager->setFirstName('John')->setLastName('Doe')->setSalary(1000)->setExperience(5);
-    $account->setFirstName('Jane')->setLastName('Doe')->setSalary(1000)->setExperience(5);
-    $ik->setFirstName('Jack')->setLastName('Doe')->setSalary(1000)->setExperience(5);
+    $manager->setFirstName('John')->setLastName('Doe')->setExperience(5);
+    $account->setFirstName('Jane')->setLastName('Doe')->setExperience(5);
+    $ik->setFirstName('Jack')->setLastName('Doe')->setExperience(5);
 
     echo "Manager " . $manager->getFirstName() . " " . $manager->getLastName() . " salary is " . $manager->calculateSalary() . "<hr>";
     echo "Account " . $account->getFirstName() . " " . $account->getLastName() . " salary is " . $account->calculateSalary() . "<hr>";

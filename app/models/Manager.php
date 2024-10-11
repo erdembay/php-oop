@@ -6,6 +6,7 @@ class Manager extends Employee {
     use Logger;
     public function calculateSalary(): float {
         $this->log('Manager salary is calculated');
-        return ($this->getExperience() * 100) + $this->getSalary();
+        $salary = self::SALARY;
+        return ($this->getExperience() * 100) + $salary;
     }
 }

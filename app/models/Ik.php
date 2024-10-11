@@ -6,6 +6,7 @@ class Ik extends Employee {
     use Logger;
     public function calculateSalary(): float {
         $this->log('Ik salary is calculated');
-        return ($this->getExperience() * 20) + $this->getSalary();
+        $salary = self::SALARY;
+        return ($this->getExperience() * 10) + $salary;
     }
 }
