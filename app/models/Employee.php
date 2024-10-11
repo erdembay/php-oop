@@ -1,7 +1,10 @@
 <?php
 namespace app\models; // Namespace
 use app\contracts\IEmployee; // Use keyword
+use app\traits\Logger; // Use keyword
+
 abstract class Employee implements IEmployee { // Class
+    use Logger; // Trait
     protected string $firstName; // Property
     protected string $lastName; // Property
     protected int $age; // Property
