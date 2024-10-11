@@ -1,8 +1,12 @@
 <?php
-class Employee {
+namespace app\models; // Namespace
+use app\contracts\IEmployee; // Use keyword
+abstract class Employee implements IEmployee { // Class
     protected string $firstName; // Property
     protected string $lastName; // Property
     protected int $age; // Property
+    protected float $salary; // Property
+    protected int $experience; // Property
     public function __construct(int $age) { // Constructor
         $this->age = $age;
     }
@@ -25,6 +29,21 @@ class Employee {
     }
     public function setAge(int $age): self { // Setter
         $this->age = $age;
+        return $this;
+    }
+    abstract function calculateSalary(): float; // Abstract method
+    public function getSalary(): float { // Method
+        return $this->salary;
+    }
+    public function setSalary(float $salary): Employee { // Method
+        $this->salary = $salary;
+        return $this;
+    }
+    public function getExperience(): int { // Method
+        return $this->experience;
+    }
+    public function setExperience(int $experience): Employee { // Method
+        $this->experience = $experience;
         return $this;
     }
     public function __destruct() { // Destructor
