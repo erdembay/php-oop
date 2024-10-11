@@ -5,7 +5,6 @@ abstract class Employee implements IEmployee { // Class
     protected string $firstName; // Property
     protected string $lastName; // Property
     protected int $age; // Property
-    public const SALARY = 9000; // Property
     protected int $experience; // Property
     public function __construct(int $age) { // Constructor
         $this->age = $age;
